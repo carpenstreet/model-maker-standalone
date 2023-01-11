@@ -288,11 +288,10 @@ class FILEBROWSER_PT_bookmarks_system(Panel):
 
 class FILEBROWSER_MT_bookmarks_context_menu(Menu):
     bl_label = "Bookmarks Specials"
-    bl_description = "Show menu for bookmark"
 
     def draw(self, _context):
         layout = self.layout
-        layout.operator("file.bookmark_cleanup", icon='X', text="Cleanup", text_ctxt="abler")
+        layout.operator("file.bookmark_cleanup", icon='X', text="Cleanup")
 
         layout.separator()
         layout.operator("file.bookmark_move", icon='TRIA_UP_BAR',
@@ -405,13 +404,7 @@ class FILEBROWSER_PT_advanced_filter(Panel):
 
 
 def is_option_region_visible(context, space):
-    from bpy_extras.asset_utils import SpaceAssetInfo
-
-    if SpaceAssetInfo.is_asset_browser(space):
-        pass
-    # For the File Browser, there must be an operator for there to be options
-    # (irrelevant for the Asset Browser).
-    elif not space.active_operator:
+    if not space.active_operator:
         return False
 
     for region in context.area.regions:
@@ -708,7 +701,7 @@ class ASSETBROWSER_PT_metadata(asset_utils.AssetBrowserPanel, Panel):
         asset_file_handle = context.asset_file_handle
 
         if asset_file_handle is None:
-            layout.label(text="No active asset", icon='INFO')
+            layout.label(text="No asset selected", icon='INFO')
             return
 
         asset_library_ref = context.asset_library_ref

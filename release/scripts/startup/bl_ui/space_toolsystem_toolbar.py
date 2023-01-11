@@ -373,7 +373,7 @@ class _defs_transform:
             idname="builtin.transform",
             label="Transform",
             description=(
-                "Support any combination of grab, rotate, and scale at once"
+                "Supports any combination of grab, rotate, and scale at once"
             ),
             icon="ops.transform.transform",
             widget="VIEW3D_GGT_xform_gizmo",
@@ -1779,7 +1779,7 @@ class _defs_image_uv_transform:
             idname="builtin.transform",
             label="Transform",
             description=(
-                "Support any combination of grab, rotate, and scale at once"
+                "Supports any combination of grab, rotate, and scale at once"
             ),
             icon="ops.transform.transform",
             widget="IMAGE_GGT_gizmo2d",
@@ -2517,7 +2517,7 @@ class _defs_sequencer_generic:
             idname="builtin.transform",
             label="Transform",
             description=(
-                "Support any combination of grab, rotate, and scale at once"
+                "Supports any combination of grab, rotate, and scale at once"
             ),
             icon="ops.transform.transform",
             widget="SEQUENCER_GGT_gizmo2d",
@@ -2788,9 +2788,12 @@ class VIEW3D_PT_tools_active(ToolSelectPanelHelper, Panel):
 
     _tools_default = (
         *_tools_select,
+        _defs_view3d_generic.cursor,
         None,
         *_tools_transform,
         None,
+        *_tools_annotate,
+        _defs_view3d_generic.ruler,
     )
 
     # Private tools dictionary, store data to implement `tools_all` & `tools_from_context`.
@@ -2805,6 +2808,7 @@ class VIEW3D_PT_tools_active(ToolSelectPanelHelper, Panel):
         'OBJECT': [
             *_tools_default,
             None,
+            _tools_view3d_add,
         ],
         'POSE': [
             *_tools_default,
