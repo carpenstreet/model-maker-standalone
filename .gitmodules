@@ -21,3 +21,6 @@
 [submodule "launcher_qt"]
 	path = launcher_qt
 	url = https://github.com/ACON3D/QT-Launcher.git
+[submodule "release/scripts/startup/model-maker"]
+	path = release/scripts/startup/model-maker
+	url = https://github.com/ACON3D/Model-Maker-Blender.git
