@@ -2230,8 +2230,8 @@ classes = (
     VIEW3D_MT_brush_context_menu_paint_modes,
     VIEW3D_PT_tools_object_options,
     VIEW3D_PT_tools_object_options_transform,
-    VIEW3D_PT_tools_meshedit_options,
-    VIEW3D_PT_tools_meshedit_options_automerge,
+    # VIEW3D_PT_tools_meshedit_options,
+    # VIEW3D_PT_tools_meshedit_options_automerge,
     VIEW3D_PT_tools_armatureedit_options,
     VIEW3D_PT_tools_posemode_options,
 
