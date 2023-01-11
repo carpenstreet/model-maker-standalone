@@ -477,7 +477,7 @@ void GHOST_WindowCocoa::setTitle(const char *title)
   NSString *windowTitle = [[NSString alloc] initWithCString:title encoding:NSUTF8StringEncoding];
 
   // Set associated file if applicable
-  if (windowTitle && [windowTitle hasPrefix:@"ABLER"]) {
+  if (windowTitle && [windowTitle hasPrefix:@"AutoModelMaker"]) {
     NSRange fileStrRange;
     NSString *associatedFileName;
     int len;

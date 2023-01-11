@@ -568,14 +568,14 @@ GHOST_TSuccess GHOST_SystemCocoa::init()
         NSMenu *appMenu;
 
         // Create the application menu
-        appMenu = [[NSMenu alloc] initWithTitle:@"ABLER"];
+        appMenu = [[NSMenu alloc] initWithTitle:@"AutoModelMaker"];
 
-        [appMenu addItemWithTitle:@"About ABLER"
+        [appMenu addItemWithTitle:@"About AutoModelMaker"
                            action:@selector(orderFrontStandardAboutPanel:)
                     keyEquivalent:@""];
         [appMenu addItem:[NSMenuItem separatorItem]];
 
-        menuItem = [appMenu addItemWithTitle:@"Hide ABLER"
+        menuItem = [appMenu addItemWithTitle:@"Hide AutoModelMaker"
                                       action:@selector(hide:)
                                keyEquivalent:@"h"];
         [menuItem setKeyEquivalentModifierMask:NSEventModifierFlagCommand];
@@ -590,7 +590,7 @@ GHOST_TSuccess GHOST_SystemCocoa::init()
                            action:@selector(unhideAllApplications:)
                     keyEquivalent:@""];
 
-        menuItem = [appMenu addItemWithTitle:@"Quit ABLER"
+        menuItem = [appMenu addItemWithTitle:@"Quit AutoModelMaker"
                                       action:@selector(terminate:)
                                keyEquivalent:@"q"];
         [menuItem setKeyEquivalentModifierMask:NSEventModifierFlagCommand];

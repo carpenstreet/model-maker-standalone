@@ -458,7 +458,7 @@ void wm_window_title(wmWindowManager *wm, wmWindow *win)
       GHOST_SetTitle(win->ghostwin, str);
     }
     else {
-      GHOST_SetTitle(win->ghostwin, "ABLER");
+      GHOST_SetTitle(win->ghostwin, "AutoModelMaker");
     }
 
     /* Informs GHOST of unsaved changes, to set window modified visual indicator (macOS)
@@ -645,7 +645,7 @@ static void wm_window_ghostwindow_ensure(wmWindowManager *wm, wmWindow *win, boo
       win->cursor = WM_CURSOR_DEFAULT;
     }
 
-    wm_window_ghostwindow_add(wm, "ABLER", win, is_dialog);
+    wm_window_ghostwindow_add(wm, "AutoModelMaker", win, is_dialog);
   }
 
   if (win->ghostwin != NULL) {
@@ -1179,7 +1179,7 @@ static int ghost_event_proc(GHOST_EventHandle evt, GHOST_TUserDataPtr C_void_ptr
 
         /* Win23/GHOST modifier bug, see T40317 */
 #ifndef WIN32
-//#  define USE_WIN_ACTIVATE
+// #  define USE_WIN_ACTIVATE
 #endif
 
         /* No context change! C->wm->windrawable is drawable, or for area queues. */
